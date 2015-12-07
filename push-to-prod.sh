@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp /var/lib/go-agent/pipelines/zips/danglay.zip /tmp/
+cp /var/lib/go-agent/pipelines/danglay/zips/danglay.zip /tmp/
 cd /tmp
 unzip danglay.zip -d folder
 cd folder/danglay
