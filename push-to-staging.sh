@@ -10,7 +10,8 @@ echo "Running Bundle Update..........."
 bundle update
 echo "Running git push now............."
 git remote add staging	git@heroku.com:staging-danglay.git
-git push staging master
+git push -f staging master
+echo "Running Migrations................"
 heroku run bundle exec rake db:migrate -r staging
 heroku logs -r staging > staging.log
 cp staging.log ../danglay/

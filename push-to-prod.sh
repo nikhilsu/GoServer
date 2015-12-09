@@ -11,6 +11,7 @@ bundle update
 echo "Running git push now..........."
 git remote add prod  git@heroku.com:danglay.git
 git push prod master
+echo "Running Migrations............"
 heroku run bundle exec rake db:migrate -r prod
 heroku logs -r prod > prod.log
 cp prod.log ../danglay/
